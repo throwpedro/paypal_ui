@@ -67,10 +67,23 @@ class BottomBar extends StatelessWidget {
               onPressed: () {},
               child: Column(
                 children: [
-                  Icon(
-                    Icons.remove_circle_outline,
-                    color: Colors.blueAccent,
-                    size: 50,
+                  Stack(
+                    alignment: AlignmentDirectional.topEnd,
+                    children: [
+                      Icon(
+                        Icons.remove_circle_outline,
+                        color: Colors.blueAccent,
+                        size: 50,
+                      ),
+                      Container(
+                        width: 20.0,
+                        height: 20.0,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                    ],
                   ),
                   Text(
                     'More',
